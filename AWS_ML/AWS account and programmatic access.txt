@@ -1,0 +1,58 @@
+Creating an AWS account
+-----------------------
+Open https://aws.amazon.com/, and then choose 'Create an AWS Account'.
+- You can also visit https://aws.amazon.com/free/ and choose 'Create a Free Account'.
+- To create an AWS account, need debit/credit card - you will be charged Rs.2 (which will get refunded)
+- You have free access to AWS for 12 months.
+- Note your AWS account ID because you'll need it for the next tasks.
+- Once done, we have created what is called a 'root' user.
+
+Amazon recommends that we do NOT use the root login for using its web services. Instead, we need to create IAM users to provide restricted access.
+IAM = Identity and Access Management
+
+
+Creating an IAM user with programmatic access
+---------------------------------------------
+1. Login as 'root' user
+2. Go to: Services> Security, Identity & Compliance> IAM> Users> Add user
+3. Enter user name, AWS access type - select both 'Programmatic access' & 'AWS Management Console access' - console password = 'custom password'.
+   Type the password you want to create/use. Require password reset - don't select, click "Next:permissions">
+4. Create group> Enter group name; Create policy - select only 'AdministratorAccess'. Click 'Create group'> Click 'Next: Review'
+5. Click 'Create user'> Note down the link for IAM user login. It will be like, e.g. https://746863185106.signin.aws.amazon.com/console
+   (To login as an IAM user, use this link and enter the password you just created.)
+6. Click 'Download.csv'. 
+7. A "credentials.csv" file will get downloaded. Save it carefully.
+
+
+Getting billing alarms
+----------------------
+Login as root user> Billing> Preferences> Receive Billing Alerts> Manage Billing Alerts> Alarms - Billing> Create Alarm
+
+
+Configuring your computer to programmatically access Amazon Web Services (including the Machine Learning services)
+------------------------------------------------------------------------
+1. Install the  AWS command line interface by running the following command:
+   "pip install awscli"
+   
+2. Configure the AWS command line interface by running the following command:
+   "aws configure"
+   
+   C:\Users\SA378220>aws configure
+   AWS Access Key ID [None]: <Enter the Access Key ID from the downloaded credentials.csv file>
+   AWS Secret Access Key [None]: <Enter the Secret Access Key from the downloaded credentials.csv file>
+   Default region name [None]: eu-west-1 (You may instead use some other available AWS region name also)
+   Default output format [None]: json
+
+   This creates the 'config' and 'credentials' files at "C:\Users\SA378220\.aws"
+   
+3. Install the AWS SDK for Python by running one of the following commands:
+   "conda install boto3" or "pip install boto3"
+
+   Boto is the Amazon Web Services (AWS) SDK for Python, which allows Python developers to write software that makes use of 
+   Amazon services like S3 and EC2. Boto provides an easy to use, object-oriented API as well as low-level direct service access.
+   
+   We are now ready to invoke the AWS services programmatically using Python code.
+
+4. You may need to install additional python packages to run the demo programs.
+   - pip install opencv      (this is needed to import cv2)
+   - pip install pygame

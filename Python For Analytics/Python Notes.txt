@@ -1,0 +1,684 @@
+Table of contents: Possible topics to be covered
+
+1. Language Basics (Introduction to python)
+2. Variables, Operators, Keywords, Statements
+3. Expressions
+4. Control Statements
+5. Functions
+6. Modules
+7. Packages
+8. Exception Handling
+9. File handling
+10. Command Line arguments
+
+One stop site for all your pythonic needs visit www.python.org
+
+Pre-requisite : Though these are just indicative / suggestive to make your learning more comfortable and is no rule / mandatory for python learning.
+
+1. Learning pre-requisite
+2. Programming pre-requisite
+
+Learning Pre-requisites
+
+a. Any programming language (C Programming)
+b. Introduction to OOPs concepts (C++ / Java)
+c. Understanding of Unix type environment (Unix / Linux)
+d. Shell scripting
+
+Programming Pre-requisites
+
+1. Python Software (www.python.org)
+2. Text editor
+3. IDE (IDLE) This is an python provided IDE, PyScripter is an open source IDE available at the given URL: code.google.com/p/pyscripter  ,  Notepad++ is an generic IDE could be used for many programming needs can be downloaded from www.notepad-plus-plus.org , Or even Eclipse (Plugin) can be used by adding a python plugin to support your pythonic development.
+
+History / Timeline of Scripting :
+
+Shell scripting : Shell scripting is a process of orderly placing unix command and applying minimal programming techniques on it.
+
+AWK scripting : Perform some field level operations and computations for having structured data.
+
+Perl (Practical extraction and report language)  Regular expression works well with patterns.
+
+Python is a generic programming language with high support of OOP concepts.
+
+Representations / Style of reffering or writing python / Python / PYTHON;
+
+a) Python - With 'P' caps we are reffering to python language representation.
+
+b) python - With all lower case mostly we are refferring to python software / interpreter.
+
+c) PYTHON - not recommended.
+
+Python flavors lets the user intergration easier. Though there are many flavors of python the following are most commonly used python for day to day needs;
+
+1. Core python / cpython / python
+2. Jython (corepython + java frameworks integration)
+3. IronPython (corepython + micrsoft .net framework)
+
+There are two version of python.
+
+	1) python 2.x   : Highly recomended to start with
+	2) python 3.x  : Recomended for advanced users
+
+Variables : Variables are reserved memory locations which are intended to store some type of value in it.
+
+In python we use the name labels as representation for variables and dont use the term variables.
+
+There are two components of variables;
+
+1. Literal : This is the value associated to the reserved memory location.
+2. Identifier : This is the name associated to the location to access the value stored in it.
+
+There are two types of variable categorization;
+
+1. Implicit Variables : Implicit variable are those which are defined and used, and most likely scripting languages use this type of variable representation. The system will identify the type specification based on the value associated to it.
+
+2. Explicit Variables : Explicit variables are those which are declared, defined and then used, Most likely
+high level programming languages use this type of variable representation. The user has to explicitly specifiy the type specification associated to the location.
+
+Scope : Scope is the specification of the boundary or the avaialiblity of variable value. In python we use three scopes. 
+	1. Local scope 
+	2. Global Scope 
+	3. External scope.
+
+
+Python Data types:
+
+Data type : Data type is the type specification of the location to store any compatible value.
+
+In python the following types makes an easier understanding of data types;
+
+1. Number type
+	a. integer
+	b. float 
+	c. long
+	d. complex
+
+2. String type
+	Any representation whether single or multiple characters is simply a string.
+
+3. Data structure type
+	a. list
+	b. tuple
+	c. dictionary
+
+
+Command line syntax: command line syntax, is the way the commands expressed in the command line.
+
+
+Syntax : <command> [-options] <programname / file> [<parameters>]
+
+command : This is the executing utility.
+
+options : This is used to customize / optimize / fine tune the output of the program.
+
+programname : This is a file which contains executional statement in it.
+
+parameter : These are the necessary values required for the program given in hand to be used internally.
+
+
+Path : This is a environment variable  used to specify the path of the excutable program.
+
+1. Temporary Path Setting
+2. Permanent Path Setting
+
+Keywords : Keywords are reserved words which are intended to do specific things.
+
+Operators : Operators are special symbols which are inteneded to perform specific operations.
+Based on the type of intended operations they are categorized as;
+
+	1. Arithmetic Operators
+	2. Boolean Operators
+	3. Relational Operators
+	4. Assignment Operators
+	5. Shift Operators
+	6. Membership Operators
+	7. Bitwise Operators
+
+Operators perform their intended operations based on the type of value associated to it.
+
+Expresssion are the way the statements can be defined in python. Python dont have line delimiter.
+
+There are two types of statements in python
+
+1. Simple statement : Simple statement is a single line self execution statement.
+2. Compound statement : Set of simple statement grouped together is compound statement.
+
+A statement in python can contains only the following.
+
+1. token : Token is a smallest representation of a statement either with operator, keyword, function.
+2. whitespace : Hard space.
+
+
+Python program components;
+
+1. Shebang line / Hashbang line / Unix like line : This is only valid for unix and unix type environment which is used to specify the path of the executing utility with special symbol #! /pathofexecutingutility as first line. This is used for two purpose a. Path specification b. Optimized execution.
+
+2. Comments : Comments are descriptive statements which help better understanding. There are two types of comments;
+	a. Script comments : Script comments are those which provide high level information about the 	script written.
+		1. Title of the program
+		2. Author of the program
+		3. Date and Time
+		4. Version of the program
+		5. Description
+	b. Code Comments: Code comments are those which provide high level understanding of the 		specific code.
+# is prefix of the comments and this will not be executed during the execution.
+
+3. Python Statements: Python command to perform some essential tasks.
+
+
+print 'Any message here' : This will print anything given with quotes as is.
+
+print label_name : This will print the value referenced by the label.
+
+print 'Message', label : This will print message appended with label value.
+
+always print returns a string value.
+
+print is a statement in 2.x version and function in 3.x version.
+
+Like "C programming" we can use format specifier to extract value associated   to the label.
+
+% is the format specifier like 'c' and can use simliar escape sequence characters to do appropriate actions. Eg. \n , \b, \a , \v, \t 
+
+Operators :
+
+Operators are special symbols which are used for some intended operations based on the value associated to it.
+
+Depending on the type of operations they intend to perform they are categorized as;
+1. Arithmetic Operators
+2. Relational Operators
+3. Boolean Operators
+4. Assignment Operators
+5. Shift Operators
+6. Bitwise Operators
+7. Membership Operators
+
+Modulus is a mathematical operation to find the immediate remiander if some number gets divided successfully else, retain the same number as result of modulus.
+
+Reading Values from User :
+
+Values can be read from the user using two special functions (2.x).
+
+1. raw_input() : This function is used to read the values and return type value always as string
+2. input() : This function is used to read the values and retain the value as is.
+3. eval() : This function returns integer type value  with string quoted representation.
+
+Control Statements : Control statements are those which are used to control the flow of execution.
+
+There are two types of Control statement.
+
+1. Conditional Control Statement
+2. Loop Control Statement
+
+If conditions are the mechansim to control the flow of execution, Such types are called conditional control statements; There is only one type of conditional statement
+
+a. If conditional control statement
+
+If loop or iterative statements are the mechansim to control the flow of execution, Such types are called loop control statements. There are two types of loop control statement
+
+a. While Loop
+b. For Loop.
+
+If conditional control statement has 4 styles of implementation.
+	1.a) Bare if
+	1.b) If else
+	1.c) If nested
+	1.d) If ladder
+
+To achive the indentation for better code representation and code readablity we use indents, Python standard is 4 white spaces gives one indent, the lines which has to be affected will follow the indentation.
+
+Boolean Operators are used to bind one more conditions. They are logical and, logical or, logical not operators to bind the conditions appropriately.
+
+and : Both the conditions should satisfy to execute true part.
+
+or : Either of the condition should satisfy to execute true part.
+
+not  : Will flip the condition. i.e. true becomes false, false becomes true.
+
+block is a heap of memory, that will have set of statements.
+
+If this block is identified with appropriate name, we call it a namespace.
+
+Relational Operators are used to check for conditional execution.
+
+>	: This is used to check if a value is greater than another value.
+<	: This is used to check if a value is less than another value.
+>=	: This is used to check if a value is either greater or equal to any value.
+<=	: This is used to check if a value is either lesser or equal to any value
+!=	: This is used to check the value is not equal to a value
+==	: This is used to check if the given value matches the existing value.
+
+
+Loop Control Statements : Loop control statements are those which execute for known number of times.
+
+There are two types of loops;
+
+1. While Loop
+2. For Loop
+
+While loop is a generic loop with known pattern and values are homogenous and having a sequential execution.
+
+For loop work on domain of values. Domain is a group / set of values. Where Loop does not have a pattern, values are hetrogenous and not sequential execution.
+
+There are three components of loop.
+1. Initial Value.	2. Condition / Final Value	3. Step Value (increment / decrement)
+
+While loop needs to have the above 3 components mandatory, for loop does not need the components. for loop performance is better than  while loop.
+
+Data  Structure :
+
+Data structure is a mechanism to provide the necessary layout for the data to be stored / used in the program.
+
+Array is mechanism to store multiple values under a single identifier.
+
+1. Array when constructed has to be specified with the number of values to be stored. Static length.
+2. Array when constructed has to be specified with the type of values to be stored. Homgeneous type.
+3. Array structure gets allocated with memory sequential and hence any adjusments internally with reordering / rearrangement cannot be possible.
+
+
+The first Datastructure implementation in python is List object.
+
+List is an ordered set of elements having mutable property which are dynamic, hetrogenous and non sequential by nature. (This can be simply termed as Dynamic and Extensible).
+
+A list object is represented with set of values enclosed inside a square paraenthisis.
+
+
+a=[val1, val2, val3, val4,...,valn]
+
+type(a) == <list>
+
+Elements of the list can be accessed with the help of the indexes associated to the position. Where 0 is always the first index and n-1 ( n is the length / capacity of list) is the last index.
+
+range is a special function in python which is used to generate a list object containing range of values.
+
+range function takes three parameters.
+
+range([startvalue], stopvalue, [stepvalue])
+
+If start values is not given , implicitly it takes the start value as zero.
+
+If step value is not given, implicitly it takes the step value as 1.
+
+stop value always specify the end of list, and this will not be considered for the list. It always takes one prior to the last value.
+
+Both will be used only on list object.
+
+range() function is used to define a list with the following syntax : range(startvalue, stopvalue, stepvalue)
+
+[] operator is used to extract values from a list with the following syntax : [startvalue, stopvalue, stepvalue)
+
+len() is a function which is used to extract / print the number of elements of iterable object.
+
+Methods are special functions within the class to peform specific intended operations. This 
+can be implemented with the help of object of the associated class.
+
+List methods :
+
+append : This method is used to insert value at the end of list. append takes single  / one group value.
+
+insert : This method is used to insert value anywhere between the list. It takes two parameters where the first one is offset (postion) value, and second is the actual value to be inserted.
+
+extend : This method is used to add multiple values as object in other list.
+
+count : This method returns the number of times the value is present in the list.
+
+index : This method returns the index of the given element of first successive search.
+
+pop : This method is used to return and remove the last element of the list.
+
+sort : This method is going to sort the elements in the list.
+
+reverse : This method is going to flip the list, which means the last element becomes first and the first element becomes last.
+
+case 1: If  the list contains number, then lexicography representation of numbers
+
+case 2: If the list contains only characters, then lexicography representation of character set
+
+case 3: If the list contains combination of both, then it is going to do  ordering based on the address.
+
+sort internally uses cmp function to do comparison of two values. cmp function always returns three types of values. 0, 1, and -1.
+
+It returns 0 if both the values are equal.
+
+it returns -1 if first value is lesser than second one (in terms of its ordering position).
+
+It returns 1 if the first value is bigger than second one (in terms of its ordering position).
+
+Tuple is another DS object which is like list.
+
+Tuple is an ordered immutable object, which does not contain any methods. this is like read 
+only list.
+
+Any  time if user needs to create a set of items which is constant by nature, then we create 
+tuple.
+
+tuple is represented with () parantheses. The values once inserted to list cannot be modified 
+in anyway.
+
+So tuples are read only list.
+Dictionary / Associative Array / Associative Table / Hashes : Dictionary is a type of DS object, which is unordered with pair of representation as key and value. The insertion order is not maintained. 
+
+Dictionary are represented with { } parantheses. There are certain properties of it as mentioned;
+
+1. Dictionary always come with set / pair of representation.
+2. Dictionary are defined with Key and an associated value with it.
+3. Dictionary keys are unique by nature
+4. Dicitonary keys are used to extract associated values
+5. Dictionary is not ordered.
+
+Syntax : dictobject = {key1 : value1 , key2: value2, key3 : value3, .... , keyn : valuen}
+
+Functions  : Functions are block of code which defines a specific functionality that can be used multiple times without re-writing the code again and again. This enables reusablitity.
+Which means write once and execute many times.
+
+There are two components of functions.
+
+a) Function Body : Function body defines the code to be executed.
+b) Function call  : Function call executes the defined code.
+
+In python Function is defined in a heap of memory with an approriate name to identify this block of code which we simply term as namespace.
+
+Rule : In python the function has to defined first before it is used.
+
+Functions can be defined with a keyword prefixed to the name of the function as def.
+
+Function call can be done by just reffering the function name which is used to identify the block.
+
+There are two types of functions.
+
+a. Builtin functions
+b. User defined functions
+
+Builtin functions are those which are defined by the language itself and can be used in any python program which are part of standard library.
+
+User defined functions are those which are defined by the programmers based on the business requirement.
+
+
+ dir() : This function is used to display the members present in the current namespace.
+
+Scope defines the availablity of any member withing a memory block. There are different scopes as mentioned.
+
+1 . Local Scope
+2. Program Scope / Global Scope
+3. External Scope
+
+Local scope members are those which are only available within a specific memory block. If we define members within a function we say it is local scope.
+
+Program scope / global scope is one where the members of main  block is available. If we define any members within main block, we say it is global scope / program scope.
+
+External scope is one which the members are accessed which are available outside the program.
+
+Passing parameters to function :
+
+Parameters are the necessary values which are sent from the calling envrionment to the function for internal usage.
+
+The following guidelines holds good for passing parameters;
+
+1. The number of parameters  sent is the number of parameters received.
+2. Python does not support overloading by can be achived using default values.
+3. The function can return the values to the calling environment using return keyword.
+4. If function returns values, then it has to be recived.
+5. Python supports, multiple return values.
+
+
+Modules :
+
+Modules are enhancement of functions defined as a seperate file and can be stored in a central repository and made accessible to other programs and becomes highly reusable.
+
+Modules provide security to the code by converting into python byte code representation, which non human readable.
+
+In python any file can be converted into a module file. But necessary is to have an extension of .py.
+
+There are two components of module file.
+
+1. Module Body : This defines the functionality that needs to be shared / concurrently used from central repository.
+
+2. Module Use / Implementation : This will consume / use the module body functionality without re-writing the code.
+
+Rule : Module file will have only the functionality to be reused / concurrently use, it will not have any stand alone implementations.
+
+Steps to create a module file.
+
+Step 1. Create any file with good naming convention having .py as extension, this is module body file.
+Step 2. Add only functionalities as required in the body file which is created.
+Step 3. Create another file will will consume the functionalities of earlier defined module file. (This will be consume file)
+Step 4. Use import keyword to add / include the module body file into the current consume file as required.
+Step 5. Use fully qualified naming convention to access the members of the module file.
+Step 6. Access the members of the module file as required.
+
+
+Import is a keyword in python which is used to include the module file and its functionality.
+
+Import can be used in three styles.
+
+1. import module1, module2, module3,.... modulen
+2. from module1 import *
+3. from module1 import specific1, specific2, ..., specificn
+
+
+
+Packages : Packages in python are mechanism to have organized way of storing and faster way of retirival modules inside it.
+
+Packages provides structure for better representation of module files which are related with functionalities.
+
+Grouping of module files within packages are purely based on the business requirement or functionalities associated to it.
+
+Steps to create package.
+
+Step1 : Create a folder with good naming convention which will be the package name.
+Step2: Get inside the created folder and start adding the modules to be part of package.
+Step 3. Create a special file called __init__.py , which package constructor that defines all those modules to be included as part of the package.
+Step 4: Define import statements inside the __init__.py file.
+Step 5: Come outside the folder and create a package use file, this will consume the package.
+Step  6. Import the package file inside the package use file and use fully qualified name to access the package-->module-->specific functionalities.
+Step 7: After successful compilation only retain the .pyc files and move out .py files.
+
+------
+
+Command Line Arguments
+
+Program exeuction are of two types.
+1. Interactive execution
+2. Non interactive execution
+
+Interacitve execution is one where the user intervention is necessary during the execution of the program. This will create bottlenecks and performance of execution can come down in resource critical environment.
+
+Non interactive execution is one where user intervention is not necessary during the execution of the program. This will improve the performance of the system in resource critical environment. This can be achived using command line arguments.
+
+Command line argument  is one where the necessary values for the program are given as arguments before exection as inhand to the program.
+
+Syntax :
+<Command> [-options] <programname> [<arguments>]
+
+Command is the executing utility. Options are used to tweak / finetune the program. Prograname contains executable instructions, arguments are the command line arguments. 
+
+in argv list object the first element or zeroth index value will always have name of the file which is currently executing. argv[0] == filename.
+
+
+
+Exceptions :
+
+Errors : Errors are instances that are triggered which are not anticipated. If error occurs then it give wrong results or halts the execution any further.
+
+Exceptions are mechanism to deal with errors.
+
+Errors can be categorized as;
+
+1. Runtime Errors
+2. Compiletime Errors
+3. Logical Errors
+
+Compile time errors are those which are occured during the compilation of the program. Most likely cause of the compile time is syntax errors. These errors has to be fixed to continue the exeuction, and can be identified with the help of understanding correct syntax (Knowing the language correct).
+
+Runtime Errors are those which are occured during the execution of the program. Most likely cause of this would be wrong Data representation. These errors can be only due to bad data, but the program will have no compile time problem. These errors can be identified with the help of defining appropriate test cases.
+
+Logical Errors are those which are occured during the execution of the program. Most likely cause of this would be due to wrong coding practices.  These errors can be identified and fixed with the help of defining appropriate use cases.
+
+In python we will deal with Runtime errors, and since we deal with the errors, we call as Runtime exceptions.
+
+Exceptions in python can be handled with try and except keywords.
+
+Guidelines for Exception handling.
+
+1. Define only those likely exception tentaive in the program.
+2. Define most likely errors on the top and less likely errors at the bottom.
+3. Use Exception object to capture the approriate default exception messages.
+4. Use non technical simple message to provide appropriate information to users regarding the errors.
+5. Use default exception handler to deal with undefined errors in the programs.
+6. Use nesting of exceptions do deal specific and generic exception.
+7. Use grouping of exception which may be similar.
+8. Use program closure blocks to deal with closure statements
+9. Handling exception is not a mechanism to solve the problem but to make the program termination smooth and as anticipated.
+
+
+There are two types of exceptions.
+
+1. Builtin Exceptions
+2. User  Defined Exceptions
+
+Builtin Exceptions are those which are defined by the language himself and are implicitly executed when the expression triggers the error.
+
+User defined exceptions are those which are defined by the user based on the business requirements  and will be triggered based on the business scenarios.
+
+
+
+Exit status is the status of the recently executed process. 
+
+Exist status can be successful or unsuccessful
+
+All succesfull process returns exit status as 0 and returns non zero for unsuccessful
+
+in Unix and unix type environment exit status can be identified using special meta character. " ? " 
+
+Program closure statements :
+
+Program closures are those which will get executed just before terminating the program.
+
+There are two types of program termantion statements as blocks.
+
+1. finally
+2. else
+
+finally block will get executed if any exception is thrown or not in the program and then the block gets executed.
+
+else block will get executed if there is no exception thrown in the program and the the block gets executed.
+
+The above program closures can be only defined along with try block.
+
+File Handling :
+
+File handling is a mechanism to capture the data generated / used by the program permanently into a physical file stored in the secondary memory / permanent storage device, so that it can be reused later for future purposes.
+
+File Operations :
+
+1. Read Operations
+2. Write Operations
+
+Read operations will load the physical file contents into temporary area, which can used within the python program. Read operation does not allow the user to make modifications to the data read from the file.
+
+Write operations will dump / wite the temporary area contents into the physical file by manipulating / changing / modifying the physical file.
+
+1. Open Acitivity  is one which is made to create a handle / association of the physical file to the temporary memory. The open operations take two parameters, a. The name of the file which needs to be associated to the program.  b. Mode of the file opening to restrict the type of operation. If the file needs to only read / open the contents to be used without any changes , then open in 'r',  If the file has to be opened with write / modification operations  possible then we open with write mode. But write mode will erase the previous contents of the file. (This mode needs to have the file existing). The file can be also opened with append mode 'a', which will add the new contents to be written into the file at the end of the current file without deleting the previous contents.
+2. Close Acitivity is one whicch makes the file to close the handle associated with the program to safely terminate the connection and write back to storage device.
+
+Python provides interface to all formats of file type.  Eg. Office application file, XML, PDF, JSON, etc..
+
+Python also provides standard API , OS and SYS,  which are very helpful for your File handle operations.
+
+There are couple methods applied on the file handle for file operations.
+
+1. read() : This method will start reading from the begin of the file (BOF) to end of file (EOF) in one go if give as is.
+2. readline() : This method will start reading from the begin of line (BOL) to end of line (EOL) where the pointer is positioned. if given in the start, will read from first line.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

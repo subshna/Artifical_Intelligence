@@ -1,0 +1,10 @@
+1. Language Basics (Introduction to python)
+2. Variables, Operators, Keywords, Statements
+3. Expressions
+4. Control Statements
+5. Functions
+6. Modules
+7. Packages
+8. Exception Handling
+9. File handling
+10. Command Line arguments

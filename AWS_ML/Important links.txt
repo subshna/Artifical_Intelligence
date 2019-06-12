@@ -1,0 +1,23 @@
+1) Documentation for Amazon Web Services
+- https://aws.amazon.com/documentation/
+It has documentation for all Amazon web services, including the Machine Learning services like Lex, Rekognition, and, Polly.
+
+
+2) Documentation on AWS SDK for Python
+- https://boto3.readthedocs.io/en/latest/reference/services/index.html
+
+Rekognition - https://boto3.readthedocs.io/en/latest/reference/services/rekognition.html#client
+Polly - https://boto3.readthedocs.io/en/latest/reference/services/polly.html#client
+
+Note: We can access the above link from the Rekognition console by following the below path.
+      Rekognition console> Additional Resources - Developer resources> Documentation - HTML> 
+      Detecting Objects and Scenes - Detecting labels in an image>
+      click on 'DetectLabels' link in page> AWS SDK for Python (at page bottom)
+
+	  
+3) Watch some short introductory videos on AWS services at https://www.aws.training/.
+   
+   Need to login with our Retail Amazon account (the one used to order products from amazon.com) to watch the videos.
+   
+   After login, click on 'Find training'> Browse by Content Domain - Artificial Intelligence.
+   Now, watch the videos on 'Introduction to Amazon Rekognition', 'Introduction to Amazon Polly', and 'Introduction to Amazon Lex'.

@@ -1,0 +1,20 @@
+https://wipro365.sharepoint.com/sites/appliedai-mll1/Shared Documents/Forms/AllItems.aspx
+
+http://dni-institute.in/blogs/scenarios-multiple-regression-applications/
+
+http://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/
+
+https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/
+
+https://topgear-app.wipro.com/artificial-intelligence/content/ai-ml-basic-concepts
+
+from sklearn.metrics import confusion_matrix
+conf_mat = confusion_matrix(y_test,y_pred)print(conf_mat)
+from sklearn.metrics import classification_report
+print(classification_report(y_test,y_pred))
+
+df_X_train = model.Acceleration[:-20]
+df_X_test = model.Acceleration[-20:]
+df_y_train = model.MPG[:-20]
+df_y_test = model.MPG[-20:]
+

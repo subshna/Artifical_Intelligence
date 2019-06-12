@@ -1,0 +1,29 @@
+Credit Card Limit Revision Analysis
+Topics:
+Credit Card
+Describe the problem, related to the topic you selected.
+Credit Limit revision based on Payment History of the Customer. The revision would also be based on other critiera like if the customer has any outstanding payment in any other credit card or Loan repayment factor.
+
+Based on the above factor can we Automated the credit limit for a customer once he apply for credit card.
+
+1. Analytic Approach
+Use Predictive Model.
+Decision Tree are built using the recrusive partitioning to classify the data and use the most predictive feature to split the data. Only based on the Previous history of the payment we cannot predict the Revision, also we have to see his current job is permanent or contract and salary status. Also if he has any other loan and credit card and the repayment structure. 
+Accordingly decison tree would be a suitable technique.
+
+2. Data Requirements
+Payment history of the Customer, any previous loan details with payment details, any outstanding payment. Customer current job and salary status, also any other credit card or loan repayment details.
+
+3. Data Collection
+Use descriptive statistics and visualization techniques to better understand the data and get acquainted with it.
+Understand the content of the data, access the quality of the data, determine any additional data if necessary.
+
+4. Data Understanding and Preparation
+Check if all the necessay information required for the prediction are avaialbe in the dataframe.
+Clean the data for any impurity. Remove any blank field, any field which has irrelevant information and duplication of data. Count the dataset for each field and if any field doesnot contain enough data, then the same can be ignored.
+
+5. Modeling and Evaluation
+Install the necessary library required to build the decision tree.
+Learn the decision tree and analyze each branch of the tree to comeup with similar rules for determining the credit limit of different customer. Select different subset ot buils decision tree on different criteria.
+
+Split te dataset into test data and training data, then build the decision tree using training set and test the model on test data to predict the actual credit limit.

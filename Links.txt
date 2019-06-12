@@ -1,0 +1,11 @@
+https://www.virtualbox.org/
+http://releases.ubuntu.com/16.04/
+ubuntu-16.04.6-desktop-amd64.iso - file name
+
+https://wipro365.sharepoint.com/sites/Python-AIMLBatchQ4march4th-8th/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2FPython%2DAIMLBatchQ4march4th%2D8th%2FShared%20Documents%2FGeneral&FolderCTID=0x0120006301057C59263F4983A73062EEA213A0
+
+https://www.youtube.com/watch?v=kHwlB_j7Hkc
+
+http://www.holehouse.org/mlclass/
+
+https://archive.ics.uci.edu/ml/machine-learning-databases/00267/data_banknote_authentication.txt

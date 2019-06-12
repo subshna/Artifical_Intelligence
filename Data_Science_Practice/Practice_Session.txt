@@ -1,0 +1,75 @@
+# Connect the data base
+%load_ext sql
+%sql ibm_db_sa://bzz11311:8c82zkwj-97sg59h@dashdb-txn-sbox-yp-lon02-01.services.eu-gb.bluemix.net:50000/BLUDB
+
+# Query the database system catalog to retrieve table metadata
+%sql select TABSCHEMA, TABNAME, CREATE_TIME from SYSCAT.TABLES where TABSCHEMA='bzz11311'
+
+# Query the database system catalog to retrieve column metadata
+%sql Select count(*) from SYSCAT.COLUMNS Where TABNAME = 'SCHOOLS'
+
+# Now retrieve the the list of columns in SCHOOLS table and their column type (datatype) and length
+%sql Select COLNAME, TYPENAME, LENGTH From SYSCAT.COLUMNS Where TABNAME='SCHOOLS'
+
+# How many Elementary Schools are in the dataset?
+%sql Select count(*) From CHICAGO_PUBLIC_SCHOOLS Where "Elementary, Middle, or High School" = 'ES'
+
+# What is the highest Safety Score?
+%sql Select MAX("Safety_Score") From CHICAGO_PUBLIC_SCHOOLS
+
+# Which schools have highest Safety Score?
+%sql Select "Name_of_School", "Safety_Score" From CHICAGO_PUBLIC_SCHOOLS Where "Safety_Score" = 99
+OR
+%sql Select "Name_of_School", "Safety_Score" From CHICAGO_PUBLIC_SCHOOLS Where "Safety_Score" = (Select MAX("Safety_Score") From CHICAGO_PUBLIC_SCHOOLS)
+
+# What are the top 10 schools with the highest "Average Student Attendance"?
+%sql Select "Name_of_School", "Average_Student_Attendance" From CHICAGO_PUBLIC_SCHOOLS \
+Order By "Average_Student_Attendance" desc Nulls Last Limit 10
+
+# Retrieve the list of 5 Schools with the lowest Average Student Attendance sorted in ascending order based on attendance
+%sql Select "Name_of_School", "Average_Student_Attendance" From CHICAGO_PUBLIC_SCHOOLS \
+Order By "Average_Student_Attendance" asc Nulls Last Limit 5
+
+# Now remove the '%' sign from the above result set for Average Student Attendance column
+%sql Select "Name_of_School", REPLACE("Average_Student_Attendance", '%', '') \
+From CHICAGO_PUBLIC_SCHOOLS Order By "Average_Student_Attendance" Fetch First 5 Rows Only
+
+# Which Schools have Average Student Attendance lower than 70%?
+%sql Select "Name_of_School", "Average_Student_Attendance" \
+From CHICAGO_PUBLIC_SCHOOLS Where Replace("Average_Student_Attendance", '%', '') < 70.0
+
+# Get the total College Enrollment (number of students) for each Community Area
+%sql Select "Community_Area_Number", Sum("College_Enrollment__number_of_students_") From CHICAGO_PUBLIC_SCHOOLS \
+Group BY "Community_Area_Number"
+
+# Get the 5 Community Areas with the least total College Enrollment (number of students) sorted in ascending order
+%sql select "Community_Area_Name", sum("College_Enrollment__number_of_students_") As Total_College_Enrollment \
+From CHICAGO_PUBLIC_SCHOOLS Group by "Community_Area_Name" Order by Total_College_Enrollment asc fetch first 5 rows only
+
+****************************************************************************************
+%sql Select count(*) From CHICAGO_PUBLIC_SCHOOLS
+%sql Select count(*) From CHICAGO_CRIME_DATA
+%sql Select count(*) From CENSUS_DATA
+
+# Find average college enrollments by community area
+%sql Select "Community_Area_Name", Avg("College_Enrollment__number_of_students_") As Total_College_Enrollment \
+From CHICAGO_PUBLIC_SCHOOLS Group by "Community_Area_Name"
+
+# Find the number of schools that are healthy school certified
+%sql Select Count(*) From CHICAGO_PUBLIC_SCHOOLS Where "Healthy_Schools_Certified_" = 'Yes'
+
+# How many observations have a Location Description value of GAS STATION?
+%sql Select Count(*) From CHICAGO_CRIME_DATA Where "Location_Description" = 'GAS STATION'
+
+# Retrieve a list of the top 10 community areas which have most number of schools and sorted in descending order.
+%sql Select Count(*) "Community_Area_Name" From CHICAGO_PUBLIC_SCHOOLS Group by "Community_Area_Name" \
+Order by "Community_Area_Name" desc Limit 10
+
+# How many observations have value MOTOR VEHICLE THEFT in the Primary Type variable (this is the number of crimes related to Motor vehicles)
+%sql Select Count(*) From CHICAGO_CRIME_DATA Where "Primary_Type" = 'MOTOR VEHICLE THEFT'
+
+# Using INNER JOIN, find the minimum “Average Student Attendance” for community are where hardship is 96
+%sql Select "Community_Area_Name", "Average_Student_Attendance" From CHICAGO_PUBLIC_SCHOOLS \
+INNER JOIN CENSUS_DATA ON \
+CHICAGO_PUBLIC_SCHOOLS."Community_Area_Number" = CENSUS_DATA."Community_Area_Number" \
+Where CENSUS_DATA."HARDSHIP_INDEX" = 96 Order by "Average_Student_Attendance"

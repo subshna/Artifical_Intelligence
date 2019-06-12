@@ -1,0 +1,13 @@
+good	1
+better	1
+best	2
+apperciate	2
+awesome	3
+excellent	3
+bad	-1
+poor	-1
+failing	-1
+worthless	-1
+worst	-2
+thrash	-2
+terrible	-3
